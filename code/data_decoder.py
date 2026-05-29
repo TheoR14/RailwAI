@@ -4,7 +4,6 @@ import numpy as np
 from pathlib import Path
 
 def decoder(file_pattern):
-
     raw_data = f'../RAW_DATA/{file_pattern}'
 
     def decode_7bit_ascii(hex_string: str) -> bytes:
