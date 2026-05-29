@@ -1,5 +1,5 @@
-.env
-VIDEO
+*.env
+*.mp4
 log.py
 CSV_DATA
 RAW_DATA
