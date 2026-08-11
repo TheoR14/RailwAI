@@ -52,10 +52,12 @@ def calc_speed(dfs_raw, anzahl_sensoren, DISTANZ_BASIS_M=4.8):
         try:
             df_ts["Sensor"] = (
                 df_ts["Sensor_raw"]
-                .str.split("_")
-                .str[-2]
+                # .str.split("_")
+                # .str[-2]
+                .str.extract(r'(\d+)_Peak')[0]
                 .astype(int)
             )
+
         except Exception as e:
             print(f"{ts} -> uebersprungen: Sensor-Parsing fehlgeschlagen: {e}")
             continue

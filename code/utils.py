@@ -17,7 +17,7 @@ def date_extractor(value):
 def main(login_data, PROJECT_ID, Projekt_DB, sensor_name, datum):
     warnings.filterwarnings("ignore", category=RuntimeWarning)
 
-    # define the research perio
+    # define the research period
     startdatum = datetime(int(datum[0:4]), int(datum[4:6]), int(datum[6:8]), 0, 0) # at 00:00
     enddatum = startdatum + timedelta(days=1) # one day later
 
@@ -40,6 +40,9 @@ def main(login_data, PROJECT_ID, Projekt_DB, sensor_name, datum):
     elif PROJECT_ID == "817":
         pattern = r'D_(\d+)'
         distance = 4.93 # mean value
+    elif PROJECT_ID == "1191":
+        # distance = 4.8
+        distance = 3
     else:
         raise ValueError("Unknown PROJECT_ID")
     

@@ -41,7 +41,8 @@ def get_dfs_raw(
 
         resp = getSensorsData(header, project_id, payload)
         for sensor_block in resp.get("Data", []):
-            sensor_id = sensor_block.get("SensorFullId")
+            # sensor_id = sensor_block.get("SensorFullId")
+            sensor_id = sensor_block.get("SensorFullId").split(".", 1)[1]
             for entry in sensor_block.get("Data", []):
                 values = entry.get("Values", [])
                 if not values:
