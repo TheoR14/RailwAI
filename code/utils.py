@@ -43,6 +43,8 @@ def main(login_data, PROJECT_ID, Projekt_DB, sensor_name, datum):
     elif PROJECT_ID == "1191":
         # distance = 4.8
         distance = 3
+    elif PROJECT_ID == "810": #St. Gallen
+        distance = 4.8
     else:
         raise ValueError("Unknown PROJECT_ID")
     

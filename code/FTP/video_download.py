@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 from ftplib import FTP, error_perm, all_errors
-from log import get_project_video
+from FTP.log import get_project_video
 
 def video_downloader(file_pattern): # file pattern is composed of the sensor name, the datatype (arz or adz), and the day
     # FTP Access variables
